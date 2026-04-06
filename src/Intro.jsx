@@ -28,7 +28,7 @@ const Intro = () => {
         <div className='flex items-center justify-between px-2 gap-2'>
 
           {/* Left Text */}
-          <div className='text-white'>
+          <div className='text-white min-w-[90px]'>
             <div className='text-purple-600 text-sm' data-aos="fade-right">
               Hello, I'am
             </div>
@@ -37,18 +37,18 @@ const Intro = () => {
             </div>
           </div>
 
-          {/* Center Image (INCREASED SIZE) */}
-          <div className='flex justify-center'>
+          {/* Center Image (BIG + RESPONSIVE) */}
+          <div className='flex justify-center flex-shrink-0'>
             <img 
               src={dimg} 
               alt="Darshan Satpute" 
-              className='w-[55vw] max-w-[240px] h-auto'
+              className='w-[58vw] max-w-[260px] h-auto'
               data-aos="fade-down"
             />
           </div>
 
           {/* Right Text */}
-          <div className='text-white text-right'>
+          <div className='text-white text-right min-w-[90px]'>
             <div className='text-purple-600 text-sm' data-aos="fade-left">
               Creative
             </div>
