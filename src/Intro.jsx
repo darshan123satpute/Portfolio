@@ -1,20 +1,22 @@
-import React, { useEffect } from 'react'
-import dimg from './assets/dimg.png'
+import React, { useEffect } from 'react';
+import dimg from './assets/dimg.png';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import github from './assets/github.png'
-import linkedin from './assets/linkedin.png'
+import github from './assets/github.png';
+import linkedin from './assets/linkedin.png';
 
 const Intro = () => {
 
   useEffect(() => {
-    AOS.init({ 
+    AOS.init({
       duration: 3000,
       once: false,
       mirror: true
     });
+
     const handleScroll = () => AOS.refresh();
     window.addEventListener('scroll', handleScroll);
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -22,13 +24,13 @@ const Intro = () => {
     <div className='relative mt-9 overflow-hidden'>
 
       {/* ── MOBILE LAYOUT ── */}
-      <div className='md:hidden'>
+      <div className='md:hidden px-4'>
 
-        {/* Row: Left Text - Image - Right Text */}
-        <div className='flex items-center justify-between px-2 gap-2'>
+        {/* Top Text Row */}
+        <div className='flex justify-between items-start'>
 
           {/* Left Text */}
-          <div className='text-white min-w-[90px]'>
+          <div className='text-white'>
             <div className='text-purple-600 text-sm' data-aos="fade-right">
               Hello, I'am
             </div>
@@ -37,18 +39,8 @@ const Intro = () => {
             </div>
           </div>
 
-          {/* Center Image (BIG + RESPONSIVE) */}
-          <div className='flex justify-center flex-shrink-0'>
-            <img 
-              src={dimg} 
-              alt="Darshan Satpute" 
-              className='w-[58vw] max-w-[260px] h-auto'
-              data-aos="fade-down"
-            />
-          </div>
-
           {/* Right Text */}
-          <div className='text-white text-right min-w-[90px]'>
+          <div className='text-white text-right'>
             <div className='text-purple-600 text-sm' data-aos="fade-left">
               Creative
             </div>
@@ -59,13 +51,23 @@ const Intro = () => {
 
         </div>
 
+        {/* Center Image */}
+        <div className='flex justify-center mt-4'>
+          <img
+            src={dimg}
+            alt="Darshan Satpute"
+            className='w-[75vw] max-w-[280px] h-auto'
+            data-aos="fade-down"
+          />
+        </div>
+
         {/* Social Icons */}
         <div className='flex justify-center gap-x-6 mt-3 mb-2' data-aos="fade-up">
           <a href="https://www.linkedin.com/in/darshansatpute/" target="_blank" rel="noreferrer">
-            <img src={linkedin} className='h-6 w-6 hover:scale-110 transition duration-300' alt="LinkedIn"/>
+            <img src={linkedin} className='h-6 w-6 hover:scale-110 transition duration-300' alt="LinkedIn" />
           </a>
           <a href="https://github.com/darshan123satpute" target="_blank" rel="noreferrer">
-            <img src={github} className='h-6 w-6 hover:scale-110 transition duration-300' alt="GitHub"/>
+            <img src={github} className='h-6 w-6 hover:scale-110 transition duration-300' alt="GitHub" />
           </a>
         </div>
 
@@ -74,12 +76,12 @@ const Intro = () => {
       {/* ── DESKTOP LAYOUT ── */}
       <div className='hidden md:block min-h-screen'>
 
-        {/* Image Center */}
+        {/* Image */}
         <div className='relative flex justify-center'>
-          <img 
-            src={dimg} 
+          <img
+            src={dimg}
             alt="Darshan Satpute"
-            className='w-[80vw] max-w-[700px] h-auto' 
+            className='w-[80vw] max-w-[700px] h-auto'
             data-aos="fade-down"
           />
         </div>
@@ -105,22 +107,19 @@ const Intro = () => {
         </div>
 
         {/* Social Icons */}
-        <div 
-          className='absolute bottom-[150px] left-[200px] flex flex-col gap-y-6 z-50' 
-          data-aos="fade-right"
-        >
+        <div className='absolute bottom-[150px] left-[200px] flex flex-col gap-y-6 z-50' data-aos="fade-right">
           <a href="https://www.linkedin.com/in/darshansatpute/" target="_blank" rel="noreferrer">
-            <img src={linkedin} className='h-7 w-7 hover:scale-110 transition duration-300' alt="LinkedIn"/>
+            <img src={linkedin} className='h-7 w-7 hover:scale-110 transition duration-300' alt="LinkedIn" />
           </a>
           <a href="https://github.com/darshan123satpute" target="_blank" rel="noreferrer">
-            <img src={github} className='h-8 w-8 hover:scale-110 transition duration-300' alt="GitHub"/>
+            <img src={github} className='h-8 w-8 hover:scale-110 transition duration-300' alt="GitHub" />
           </a>
         </div>
 
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;
