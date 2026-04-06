@@ -9,66 +9,113 @@ const Intro = () => {
 
   useEffect(() => {
     AOS.init({ 
-      duration: 1500,
-      once: true
+      duration: 3000,
+      once: false,
+      mirror: true
     });
+    const handleScroll = () => AOS.refresh();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className='text-white px-4 md:px-16 py-10'>
+    <div className='relative mt-9 overflow-hidden'>
 
-      <div className='flex flex-col md:flex-row items-center justify-between gap-10 min-h-screen'>
+      {/* ── MOBILE LAYOUT ── */}
+      <div className='md:hidden px-4'>
 
-        {/* LEFT SIDE */}
-        <div className='w-full md:w-1/3 text-center md:text-left'>
+        {/* Top Text Row */}
+        <div className='flex justify-between items-start'>
 
-          <p className='text-purple-500 text-sm md:text-lg mb-2' data-aos="fade-right">
-            Hello, I'am
-          </p>
+          {/* Left Text */}
+          <div className='text-white'>
+            <div className='text-purple-600 text-sm' data-aos="fade-right">
+              Hello, I'am
+            </div>
+            <div className='text-xl font-bold leading-tight' data-aos="fade-in">
+              Darshan <br /> Satpute
+            </div>
+          </div>
 
-          <h1 className='text-2xl md:text-5xl lg:text-6xl font-bold leading-tight' data-aos="fade-up">
-            Darshan <br /> Satpute
-          </h1>
+          {/* Right Text */}
+          <div className='text-white text-right'>
+            <div className='text-purple-600 text-sm' data-aos="fade-left">
+              Creative
+            </div>
+            <div className='text-xl font-bold leading-tight' data-aos="fade-in">
+              Developer <br /> & Designer
+            </div>
+          </div>
 
         </div>
 
-        {/* CENTER IMAGE */}
-        <div className='w-full md:w-1/3 flex justify-center'>
-
+        {/* Center Image */}
+        <div className='flex justify-center mt-4'>
           <img 
             src={dimg} 
-            alt="Darshan Satpute"
-            className='w-[70vw] max-w-[300px] md:max-w-[400px] lg:max-w-[500px] h-auto'
-            data-aos="zoom-in"
+            alt="Darshan Satpute" 
+            className='w-[75vw] max-w-[280px] h-auto'
+            data-aos="fade-down"
           />
-
         </div>
 
-        {/* RIGHT SIDE */}
-        <div className='w-full md:w-1/3 text-center md:text-right'>
-
-          <p className='text-purple-500 text-sm md:text-lg mb-2' data-aos="fade-left">
-            Creative
-          </p>
-
-          <h1 className='text-2xl md:text-5xl lg:text-6xl font-bold leading-tight' data-aos="fade-up">
-            Developer <br /> & Designer
-          </h1>
-
+        {/* Social Icons */}
+        <div className='flex justify-center gap-x-6 mt-3 mb-2' data-aos="fade-up">
+          <a href="https://www.linkedin.com/in/darshansatpute/" target="_blank" rel="noreferrer">
+            <img src={linkedin} className='h-6 w-6 hover:scale-110 transition duration-300' alt="LinkedIn"/>
+          </a>
+          <a href="https://github.com/darshan123satpute" target="_blank" rel="noreferrer">
+            <img src={github} className='h-6 w-6 hover:scale-110 transition duration-300' alt="GitHub"/>
+          </a>
         </div>
 
       </div>
 
-      {/* SOCIAL ICONS */}
-      <div className='flex justify-center md:justify-start gap-6 mt-6 md:mt-0 md:absolute md:left-10 md:bottom-10' data-aos="fade-up">
-        
-        <a href="https://www.linkedin.com/in/darshansatpute/" target="_blank" rel="noreferrer">
-          <img src={linkedin} className='h-6 w-6 md:h-7 md:w-7 hover:scale-110 transition duration-300' alt="LinkedIn"/>
-        </a>
+      {/* ── DESKTOP LAYOUT ── */}
+      <div className='hidden md:block min-h-screen'>
 
-        <a href="https://github.com/darshan123satpute" target="_blank" rel="noreferrer">
-          <img src={github} className='h-6 w-6 md:h-7 md:w-7 hover:scale-110 transition duration-300' alt="GitHub"/>
-        </a>
+        {/* Image */}
+        <div className='relative flex justify-center'>
+          <img 
+            src={dimg} 
+            alt="Darshan Satpute"
+            className='w-[80vw] max-w-[700px] h-auto' 
+            data-aos="fade-down"
+          />
+        </div>
+
+        {/* Left Text */}
+        <div className='text-white absolute top-[20%] left-[10%]'>
+          <div className='text-purple-600 text-2xl lg:text-3xl' data-aos="fade-right">
+            Hello, I'am
+          </div>
+          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in">
+            Darshan <br /> Satpute
+          </div>
+        </div>
+
+        {/* Right Text */}
+        <div className='text-white absolute top-[20%] right-[10%] text-right'>
+          <div className='text-purple-600 text-2xl lg:text-3xl' data-aos="fade-left">
+            Creative
+          </div>
+          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in">
+            Developer <br /> & Designer
+          </div>
+        </div>
+
+        {/* Social Icons */}
+        <div 
+          className='absolute bottom-[150px] left-[200px] flex flex-col gap-y-6 z-50' 
+          data-aos="fade-right"
+        >
+          <a href="https://www.linkedin.com/in/darshansatpute/" target="_blank" rel="noreferrer">
+            <img src={linkedin} className='h-7 w-7 hover:scale-110 transition duration-300' alt="LinkedIn"/>
+          </a>
+          <a href="https://github.com/darshan123satpute" target="_blank" rel="noreferrer">
+            <img src={github} className='h-8 w-8 hover:scale-110 transition duration-300' alt="GitHub"/>
+          </a>
+        </div>
 
       </div>
 
