@@ -9,9 +9,8 @@ const Intro = () => {
 
   useEffect(() => {
     AOS.init({ 
-      duration: 3000,
-      once: false,
-      mirror: true
+      duration: 1000,
+      once: true
     });
     const handleScroll = () => AOS.refresh();
     window.addEventListener('scroll', handleScroll);
@@ -19,7 +18,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <div className='relative mt-9 overflow-hidden'>
+    <div className='relative mt-9'>
 
       {/* ── MOBILE LAYOUT ── */}
       <div className='md:hidden px-4'>
@@ -28,7 +27,7 @@ const Intro = () => {
         <div className='flex justify-between items-start'>
 
           {/* Left Text */}
-          <div className='text-white'>
+          <div className='text-white relative z-10 bg-black/30 px-2 py-1 rounded'>
             <div className='text-purple-600 text-sm' data-aos="fade-right">
               Hello, I'am
             </div>
@@ -38,7 +37,7 @@ const Intro = () => {
           </div>
 
           {/* Right Text */}
-          <div className='text-white text-right'>
+          <div className='text-white text-right relative z-10 bg-black/30 px-2 py-1 rounded'>
             <div className='text-purple-600 text-sm' data-aos="fade-left">
               Creative
             </div>
@@ -54,7 +53,7 @@ const Intro = () => {
           <img 
             src={dimg} 
             alt="Darshan Satpute" 
-            className='w-[75vw] max-w-[280px] h-auto'
+            className='w-[75vw] max-w-[280px] h-auto brightness-110'
             data-aos="fade-down"
           />
         </div>
