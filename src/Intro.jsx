@@ -81,7 +81,7 @@ const Intro = () => {
           <img
             src={dimg}
             alt="Darshan Satpute"
-            className='w-[80vw] max-w-[700px] h-auto'
+            className='w-[80vw] max-w-[700px] h-auto z-50'
             data-aos="fade-down"
           />
         </div>
@@ -91,7 +91,7 @@ const Intro = () => {
           <div className='text-purple-600 text-2xl lg:text-3xl' data-aos="fade-right">
             Hello, I'am
           </div>
-          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in">
+          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in z-50">
             Darshan <br /> Satpute
           </div>
         </div>
@@ -101,7 +101,7 @@ const Intro = () => {
           <div className='text-purple-600 text-2xl lg:text-3xl' data-aos="fade-left">
             Creative
           </div>
-          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in">
+          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in z-50">
             Developer <br /> & Designer
           </div>
         </div>
