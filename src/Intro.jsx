@@ -1,22 +1,20 @@
-import React, { useEffect } from 'react';
-import dimg from './assets/dimg.png';
+import React, { useEffect } from 'react'
+import dimg from './assets/dimg.png'
 import AOS from "aos";
 import "aos/dist/aos.css";
-import github from './assets/github.png';
-import linkedin from './assets/linkedin.png';
+import github from './assets/github.png'
+import linkedin from './assets/linkedin.png'
 
 const Intro = () => {
 
   useEffect(() => {
-    AOS.init({
+    AOS.init({ 
       duration: 3000,
       once: false,
       mirror: true
     });
-
     const handleScroll = () => AOS.refresh();
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -53,9 +51,9 @@ const Intro = () => {
 
         {/* Center Image */}
         <div className='flex justify-center mt-4'>
-          <img
-            src={dimg}
-            alt="Darshan Satpute"
+          <img 
+            src={dimg} 
+            alt="Darshan Satpute" 
             className='w-[75vw] max-w-[280px] h-auto'
             data-aos="fade-down"
           />
@@ -64,10 +62,10 @@ const Intro = () => {
         {/* Social Icons */}
         <div className='flex justify-center gap-x-6 mt-3 mb-2' data-aos="fade-up">
           <a href="https://www.linkedin.com/in/darshansatpute/" target="_blank" rel="noreferrer">
-            <img src={linkedin} className='h-6 w-6 hover:scale-110 transition duration-300' alt="LinkedIn" />
+            <img src={linkedin} className='h-6 w-6 hover:scale-110 transition duration-300' alt="LinkedIn"/>
           </a>
           <a href="https://github.com/darshan123satpute" target="_blank" rel="noreferrer">
-            <img src={github} className='h-6 w-6 hover:scale-110 transition duration-300' alt="GitHub" />
+            <img src={github} className='h-6 w-6 hover:scale-110 transition duration-300' alt="GitHub"/>
           </a>
         </div>
 
@@ -78,10 +76,10 @@ const Intro = () => {
 
         {/* Image */}
         <div className='relative flex justify-center'>
-          <img
-            src={dimg}
+          <img 
+            src={dimg} 
             alt="Darshan Satpute"
-            className='w-[80vw] max-w-[700px] h-auto z-50'
+            className='w-[80vw] max-w-[700px] h-auto' 
             data-aos="fade-down"
           />
         </div>
@@ -91,7 +89,7 @@ const Intro = () => {
           <div className='text-purple-600 text-2xl lg:text-3xl' data-aos="fade-right">
             Hello, I'am
           </div>
-          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in z-50">
+          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in">
             Darshan <br /> Satpute
           </div>
         </div>
@@ -101,25 +99,28 @@ const Intro = () => {
           <div className='text-purple-600 text-2xl lg:text-3xl' data-aos="fade-left">
             Creative
           </div>
-          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in z-50">
+          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in">
             Developer <br /> & Designer
           </div>
         </div>
 
         {/* Social Icons */}
-        <div className='absolute bottom-[150px] left-[200px] flex flex-col gap-y-6 z-50' data-aos="fade-right">
+        <div 
+          className='absolute bottom-[150px] left-[200px] flex flex-col gap-y-6 z-50' 
+          data-aos="fade-right"
+        >
           <a href="https://www.linkedin.com/in/darshansatpute/" target="_blank" rel="noreferrer">
-            <img src={linkedin} className='h-7 w-7 hover:scale-110 transition duration-300' alt="LinkedIn" />
+            <img src={linkedin} className='h-7 w-7 hover:scale-110 transition duration-300' alt="LinkedIn"/>
           </a>
           <a href="https://github.com/darshan123satpute" target="_blank" rel="noreferrer">
-            <img src={github} className='h-8 w-8 hover:scale-110 transition duration-300' alt="GitHub" />
+            <img src={github} className='h-8 w-8 hover:scale-110 transition duration-300' alt="GitHub"/>
           </a>
         </div>
 
       </div>
 
     </div>
-  );
-};
+  )
+}
 
-export default Intro;
+export default Intro
