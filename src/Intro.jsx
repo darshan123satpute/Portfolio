@@ -22,13 +22,13 @@ const Intro = () => {
     <div className='relative mt-9 overflow-hidden'>
 
       {/* ── MOBILE LAYOUT ── */}
-      <div className='md:hidden px-4'>
+      <div className='md:hidden'>
 
-        {/* Top Text Row */}
-        <div className='flex justify-between items-start'>
+        {/* Row: Left Text - Image - Right Text */}
+        <div className='flex items-center justify-between px-2 gap-2'>
 
           {/* Left Text */}
-          <div className='text-white'>
+          <div className='text-white min-w-[90px]'>
             <div className='text-purple-600 text-sm' data-aos="fade-right">
               Hello, I'am
             </div>
@@ -37,8 +37,18 @@ const Intro = () => {
             </div>
           </div>
 
+          {/* Center Image (BIG + RESPONSIVE) */}
+          <div className='flex justify-center flex-shrink-0'>
+            <img 
+              src={dimg} 
+              alt="Darshan Satpute" 
+              className='w-[58vw] max-w-[260px] h-auto'
+              data-aos="fade-down"
+            />
+          </div>
+
           {/* Right Text */}
-          <div className='text-white text-right'>
+          <div className='text-white text-right min-w-[90px]'>
             <div className='text-purple-600 text-sm' data-aos="fade-left">
               Creative
             </div>
@@ -47,16 +57,6 @@ const Intro = () => {
             </div>
           </div>
 
-        </div>
-
-        {/* Center Image */}
-        <div className='flex justify-center mt-4'>
-          <img 
-            src={dimg} 
-            alt="Darshan Satpute" 
-            className='w-[75vw] max-w-[280px] h-auto'
-            data-aos="fade-down"
-          />
         </div>
 
         {/* Social Icons */}
@@ -74,7 +74,7 @@ const Intro = () => {
       {/* ── DESKTOP LAYOUT ── */}
       <div className='hidden md:block min-h-screen'>
 
-        {/* Image */}
+        {/* Image Center */}
         <div className='relative flex justify-center'>
           <img 
             src={dimg} 
