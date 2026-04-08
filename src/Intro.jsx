@@ -23,7 +23,6 @@ const Intro = () => {
       {/* ── MOBILE LAYOUT ── */}
       <div className='md:hidden px-4'>
 
-        {/* Top Text Row */}
         <div className='flex justify-between items-start'>
 
           {/* Left Text */}
@@ -42,13 +41,14 @@ const Intro = () => {
               Creative
             </div>
             <div className='text-xl font-bold leading-tight' data-aos="fade-in">
-              Developer <br /> & Designer
+              <span className="block">Developer &</span>
+              <span className="block">Problem Solver</span>
             </div>
           </div>
 
         </div>
 
-        {/* Center Image */}
+        {/* Image */}
         <div className='flex justify-center mt-4'>
           <img 
             src={dimg} 
@@ -78,34 +78,35 @@ const Intro = () => {
           <img 
             src={dimg} 
             alt="Darshan Satpute"
-            className='w-[80vw] max-w-[700px] h-auto' 
+            className='w-[80vw] max-w-[650px] h-auto' 
             data-aos="fade-down"
           />
         </div>
 
         {/* Left Text */}
-        <div className='text-white absolute top-[20%] left-[10%]'>
+        <div className='text-white absolute top-[20%] left-[5%] max-w-[300px]'>
           <div className='text-purple-600 text-2xl lg:text-3xl' data-aos="fade-right">
             Hello, I'am
           </div>
-          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in">
+          <div className='text-4xl lg:text-5xl font-bold' data-aos="fade-in">
             Darshan <br /> Satpute
           </div>
         </div>
 
-        {/* Right Text */}
-        <div className='text-white absolute top-[20%] right-[10%] text-right'>
+        {/* Right Text (FIXED) */}
+        <div className='text-white absolute top-[20%] right-[5%] text-right max-w-[320px]'>
           <div className='text-purple-600 text-2xl lg:text-3xl' data-aos="fade-left">
             Creative
           </div>
-          <div className='text-4xl lg:text-6xl font-bold' data-aos="fade-in">
-            Developer <br /> & Designer
+          <div className='text-4xl lg:text-5xl font-bold leading-tight' data-aos="fade-in">
+            <span className="block">Developer &</span>
+            <span className="block">Problem Solver</span>
           </div>
         </div>
 
         {/* Social Icons */}
         <div 
-          className='absolute bottom-[150px] left-[200px] flex flex-col gap-y-6 z-50' 
+          className='absolute bottom-[150px] left-[120px] flex flex-col gap-y-6 z-50' 
           data-aos="fade-right"
         >
           <a href="https://www.linkedin.com/in/darshansatpute/" target="_blank" rel="noreferrer">
