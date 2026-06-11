@@ -10,12 +10,12 @@ const skillSections = [
   {
     label: 'Technologies / Frameworks',
     borderColor: 'border-purple-400/60',
-    skills: ['React.js', 'Tailwind CSS', 'Git', 'REST APIs'],
+    skills: ['React.js', 'Tailwind CSS', 'Git', 'REST APIs', 'Shell Commands', 'Linux Commands'],
   },
   {
-    label: 'Database',
+    label: 'Database / Big Data',
     borderColor: 'border-purple-300/40',
-    skills: ['MySQL'],
+    skills: ['MySQL', 'Hive', 'Hadoop'],
   },
 ]
 
@@ -111,9 +111,10 @@ const About = () => {
      
         <div className="flex justify-center mb-16">
           <a
-            href="https://drive.google.com/file/d/19M_srSnu0c8Dk6kTW8-XWwzl-xkAOwOz/view?usp=sharing"
+            href="https://drive.google.com/uc?export=download&id=1F16f32CQXirGgQVosahFG2VtJNpkHNDL"
             target="_blank"
             rel="noreferrer"
+            download="Darshan_Satpute_Resume.pdf"
           >
             <button className="px-10 py-3 rounded-full font-semibold text-white
               bg-[#1a1333] border border-purple-500/30
@@ -187,18 +188,32 @@ const About = () => {
        
           <Card >
             <CardHeader title="Experience" />
-            <div className="border-l-2 border-purple-500 pl-4  hover:border-purple-400 transition-all duration-200">
-              <p className="font-semibold text-white text-[15px]">Sumago Infotech Pvt. Ltd.</p>
-              <p className="text-amber-300 text-xs mt-1">Dec 2023 – Jan 2024</p>
-              <p className="text-purple-300 font-medium mt-1">React Developer Intern</p>
-              <ul className="mt-3 space-y-2 text-gray-400 text-sm list-disc list-inside">
-                <li>Led a team on a full-stack web development project</li>
-                <li>Built reusable React components with React Hooks</li>
-                <li>Integrated REST APIs in an Agile workflow</li>
-              </ul>
+            <div className="border-l-2 border-purple-500 pl-4  hover:border-purple-400 transition-all duration-200 space-y-8">
+              <div>
+                <p className="font-semibold text-white text-[15px]">Sumago Infotech Pvt. Ltd.</p>
+                <p className="text-amber-300 text-xs mt-1">Dec 2023 – Jan 2024</p>
+                <p className="text-purple-300 font-medium mt-1">React Developer Intern</p>
+                <ul className="mt-3 space-y-2 text-gray-400 text-sm list-disc list-inside">
+                  <li>Led a team on a full-stack web development project</li>
+                  <li>Built reusable React components with React Hooks</li>
+                  <li>Integrated REST APIs in an Agile workflow</li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="font-semibold text-white text-[15px]">Manasvi Tech Solutions Pvt. Ltd.</p>
+                <p className="text-amber-300 text-xs mt-1">Sep 2025 – Feb 2026</p>
+                <p className="text-purple-300 font-medium mt-1">Jr. Software Developer Intern</p>
+                <ul className="mt-3 space-y-2 text-gray-400 text-sm list-disc list-inside">
+                  <li>Built frontend web projects using HTML5, CSS3, JavaScript, React.js, and Bootstrap.</li>
+                  <li>Developed responsive and interactive user interfaces for web applications.</li>
+                  <li>Integrated REST APIs and handled dynamic data rendering in React.js.</li>
+                  <li>Participated in debugging, testing, and software feature enhancement tasks.</li>
+                  <li>Collaborated on project development and workflow management.</li>
+                </ul>
+              </div>
             </div>
           </Card>
-
         </div>
       </div>
     </div>
